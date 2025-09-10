@@ -53,7 +53,7 @@ public class CandidateServiceImpl implements CandidateService {
     }
     @Override
     public void deleteCandidate(Long id) {
-        Candidate candidate = candidateRepository.findById(id)
+        candidateRepository.findById(id)
         .orElseThrow(() -> new ResourceNotFound("Candidate doesn't exist with id: " + id));
         candidateRepository.deleteById(id);
 
