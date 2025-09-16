@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from 'react'
 import { getCandidates } from '../services/CandidateService';
-
+import { useNavigate } from 'react-router-dom';
 function CandidateList() {
 
     const [candidates, setCandidates] = useState([])
+
+    const navigate = useNavigate();
+
     useEffect(() => {
         getCandidates().then((response) => {
             setCandidates(response.data);
@@ -11,9 +14,14 @@ function CandidateList() {
             console.error(error);
         })
     }, [])
+
+    function addNewCandidate() {
+        navigate('/add-candidate')
+    }
   return (
     <div className='container'>
         <h2 className='text-center'> List of Candidates</h2>
+        <button className=' addcandidate' onClick={addNewCandidate}> Add Candidate</button>
         <table className=" table table bordered table-striped candidate-table ">
             <thead>
                 <tr>

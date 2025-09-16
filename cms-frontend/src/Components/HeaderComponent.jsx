@@ -1,14 +1,13 @@
 import React from 'react'
 
-function HeaderComponent() {
+const HeaderComponent = () => {
   return (
     <div>
-      <header>
-        <nav className='navbar navbar-dark bg-dark'>
-        <a className='navbar-brand' href='https://www.example.com'> Candidate Management System</a>
-
-        </nav>
-      </header>
+        <header>
+          <nav className='navbar navbar-dark bg-dark'>
+            <a className='navbar-brand' href='https://www.example.com'>Candidate Management System</a>
+          </nav>
+        </header>
     </div>
   )
 }

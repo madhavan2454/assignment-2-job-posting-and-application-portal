@@ -6,15 +6,26 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import CandidateList from './Components/CandidateList'
 import HeaderComponent from './Components/HeaderComponent'
 import FooterComponent from './Components/FooterComponent'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import CandidateComponent from './Components/CandidateComponent'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <HeaderComponent />
-    <CandidateList />
-    <FooterComponent />
+      <BrowserRouter>
+        <HeaderComponent />
+          <Routes>
+           { /*//http://localhost:3000/ */}
+           <Route path ='/' element={ <CandidateList />}></Route>
+           {/* //http://localhost:3000/CandidateList */}
+           <Route path ='/CandidateList' element={ <CandidateList />}></Route>
+           {/* //http://localhost:3000/add-candidate */}
+           <Route path ='/add-candidate' element={ <CandidateComponent />}></Route>
+          </Routes>
+        <FooterComponent />
+      </BrowserRouter>
     </>
   )
 }

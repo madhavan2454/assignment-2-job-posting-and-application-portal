@@ -5,7 +5,7 @@ const FooterComponent = () => {
     <div>
           <footer>
             <nav className='footer'>
-                <span>© All Rights Reserved by Phenom</span>
+                <span>Developed By Madhavan</span>
             </nav>
           </footer>
     </div>
