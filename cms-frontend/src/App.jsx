@@ -23,6 +23,8 @@ function App() {
            <Route path ='/CandidateList' element={ <CandidateList />}></Route>
            {/* //http://localhost:3000/add-candidate */}
            <Route path ='/add-candidate' element={ <CandidateComponent />}></Route>
+           { /* //http://localhost:3000/edit-candidate */}
+           <Route path ='/edit-candidate/:id' element={ <CandidateComponent />}></Route>
           </Routes>
         <FooterComponent />
       </BrowserRouter>

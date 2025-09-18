@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { getCandidates } from '../services/CandidateService';
+import { deleteCandidate, getCandidates } from '../services/CandidateService';
 import { useNavigate } from 'react-router-dom';
 function CandidateList() {
 
@@ -8,15 +8,32 @@ function CandidateList() {
     const navigate = useNavigate();
 
     useEffect(() => {
+        getAllCandidates();
+    }, [])
+
+    function getAllCandidates(){
         getCandidates().then((response) => {
             setCandidates(response.data);
         }).catch(error => {
             console.error(error);
         })
-    }, [])
+    }
 
     function addNewCandidate() {
         navigate('/add-candidate')
+    }
+
+    function updateCandidate(id) {
+        navigate(`/edit-candidate/${id}`)
+    }
+
+    function removeCandidate(id) {
+        console.log(id)
+        deleteCandidate(id).then((response) => {
+            getAllCandidates();
+        }).catch(error => {
+            console.error(error);
+        })
     }
   return (
     <div className='container'>
@@ -31,6 +48,7 @@ function CandidateList() {
                     <th>PhoneNo</th>
                     <th>ResumeLink</th>
                     <th>CurrentStatus</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
 
@@ -44,6 +62,11 @@ function CandidateList() {
                             <td> {candidate.phoneNumber}</td>
                             <td> {candidate.resumeLink}</td>
                             <td> {candidate.currentStatus}</td>
+                            <td>
+                                <button className='btn btn-info' onClick={() => updateCandidate(candidate.id)}>Update</button>
+                                <button className='btn btn-danger' onClick={() => removeCandidate(candidate.id)} 
+                                         style={{marginLeft: "10px"}}> Delete</button>
+                            </td>
                         </tr>
                     ))
                 }

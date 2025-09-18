@@ -39,4 +39,6 @@
 .addcandidate {
     float: right;
     margin-bottom: 10px;
+    background-color: green;
+    color:white
 }
