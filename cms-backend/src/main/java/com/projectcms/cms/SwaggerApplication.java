@@ -9,9 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @OpenAPIDefinition(
 		info = @Info(
-				title = "Candidates API Documentation",
+				title = "API Documentation for Candidate Management System",
 				version = "1.0",
-				description = "API documentation for managing candidates"
+				description = "API documentation for Candidate Management System and Job Portal"
 		)
 )
 @SpringBootApplication
