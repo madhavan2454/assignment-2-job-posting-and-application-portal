@@ -61,7 +61,7 @@ spring.jpa.hibernate.ddl-auto=update
     
 
 ### -> API Overview:
-● Candidate REST APIs
+● Candidate REST APIs:
 | Method | Endpoint               | Description            |
 | ------ | ---------------------- | ---------------------- |
 | GET    | `/api/candidates`      | Get all candidates     |
@@ -74,7 +74,7 @@ spring.jpa.hibernate.ddl-auto=update
 <img width="1917" height="1123" alt="image" src="https://github.com/user-attachments/assets/bc6aca47-03ff-4b2f-b53c-17a5483817c5" />
 
 
-● Job REST APIs
+● Job REST APIs:
 | Method | Endpoint         | Description              |
 | ------ | -----------------| ------------------------ |
 | GET    | `/api/jobs`      | Get the list of all Jobs     |
