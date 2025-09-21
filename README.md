@@ -5,10 +5,10 @@ This Repository URL consists the Source Code of the Project "Job Posting and App
 ### -> Project Description:
 
 ● In this Project, I had implemented the backend REST APIs for job to perform CRUD operations.<br/> <br/>
--> READ: GET /api/jobs to get a list of all candidates from the database. <br/>
--> CREATE: POST /api/candidates to add a new candidate to the database.   
--> UPDATE: PUT /api/candidates/{id} to modify an existing candidate's data.   
--> DELETE: DELETE /api/candidates/{id} to remove a candidate.
+-> READ: GET /api/jobs to get a list of all jobs from the database. <br/>
+-> CREATE: POST /api/jobs to add a job post to the database.   
+-> UPDATE: PUT /api/jobs/{id} to modify an existing job post data.   
+-> DELETE: DELETE /api/jobs/{id} to remove a job post.
 
 ● I had created a system to store, view, and organize information about the jobs.
 
