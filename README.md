@@ -16,11 +16,9 @@ This Repository URL consists the Source Code of the Project "Job Posting and App
 
 ### -> Project Outcomes:
 
-● A Front-end: A dedicated Front-end that provides a user interface using modern component framework. 
+● A Back-end API: A Backend server that is built to handle requests for jobs using REST APIs. 
 
-● A Back-end API: A Backend server that is built to handle requests using REST APIs. 
-
-● A Database: A SQL database that stores the candidate information.
+● A Database: A SQL database that stores the jobs information.
 
 
 
